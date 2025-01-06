@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="CameraViewController" customModule="ASCIICamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="MTKView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCk-yf-kSg">
+                                <rect key="frame" x="0.0" y="754" width="393" height="64"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aHa-nc-HbL">
+                                        <rect key="frame" x="4" y="0.0" width="385" height="64"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-mQ-c0x" userLabel="Edge">
+                                                <rect key="frame" x="0.0" y="15.000000000000004" width="76.333333333333329" height="34.333333333333343"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Edge"/>
+                                                <connections>
+                                                    <action selector="onEdgeDetectionFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="i5Q-Er-wDT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-xG-WCH">
+                                                <rect key="frame" x="78.333333333333314" y="15.000000000000004" width="79.666666666666686" height="34.333333333333343"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="ASCII"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="ASCII"/>
+                                                <connections>
+                                                    <action selector="onAsciiFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ZeW-qm-3nB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKE-eQ-Qa7" userLabel="Grayscale">
+                                                <rect key="frame" x="160" y="15.000000000000004" width="120.66666666666669" height="34.333333333333343"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Grayscale"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Grayscale"/>
+                                                <connections>
+                                                    <action selector="onGrayscaleFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="GRl-e2-kp3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz5-Uu-bUk">
+                                                <rect key="frame" x="282.66666666666669" y="15.000000000000004" width="102.33333333333331" height="34.333333333333343"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Pixelate"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Pixelate"/>
+                                                <connections>
+                                                    <action selector="onPixelFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bLV-vJ-77q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4Xs-n0-vOt"/>
+                                    <constraint firstItem="aHa-nc-HbL" firstAttribute="leading" secondItem="aCk-yf-kSg" secondAttribute="leading" constant="4" id="N3O-Zs-96z"/>
+                                    <constraint firstItem="aHa-nc-HbL" firstAttribute="top" secondItem="aCk-yf-kSg" secondAttribute="top" id="igb-w5-4KX"/>
+                                    <constraint firstAttribute="bottom" secondItem="aHa-nc-HbL" secondAttribute="bottom" id="lff-Wk-vOx"/>
+                                    <constraint firstAttribute="trailing" secondItem="aHa-nc-HbL" secondAttribute="trailing" constant="4" id="ocA-DU-iF2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rZh-zQ-HcR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aCk-yf-kSg" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="1vg-m7-Vbi"/>
+                            <constraint firstItem="rZh-zQ-HcR" firstAttribute="bottom" secondItem="aCk-yf-kSg" secondAttribute="bottom" id="Drc-Hx-g7A"/>
+                            <constraint firstItem="rZh-zQ-HcR" firstAttribute="trailing" secondItem="aCk-yf-kSg" secondAttribute="trailing" id="r4Y-Bo-IGr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="buttons" destination="bst-mQ-c0x" collectionClass="NSMutableArray" id="KU1-AQ-fqk"/>
+                        <outletCollection property="buttons" destination="zKE-eQ-Qa7" collectionClass="NSMutableArray" id="fu7-Ie-g4L"/>
+                        <outletCollection property="buttons" destination="Mz5-Uu-bUk" collectionClass="NSMutableArray" id="Clq-sF-uzd"/>
+                        <outletCollection property="buttons" destination="jhj-xG-WCH" collectionClass="NSMutableArray" id="M8C-Vy-9rW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
