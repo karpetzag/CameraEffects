@@ -10,10 +10,10 @@ import MetalKit
 class Renderer: NSObject {
 	
 	let view: MTKView
-	let device: MTLDevice
+	let device: Device
 
 	private lazy var commandQueue: MTLCommandQueue = {
-		guard let queue = self.device.makeCommandQueue() else {
+		guard let queue = self.device.metalDevice.makeCommandQueue() else {
 			fatalError("Failed to create command queue")
 		}
 
@@ -21,10 +21,10 @@ class Renderer: NSObject {
 	}()
 	
 	private var projectionMatrix = float4x4.identity
+
+	var filter: (any IFilter)?
 	
-	var effect: (any Effect)?
-	
-	init(view: MTKView, device: MTLDevice) {
+	init(view: MTKView, device: Device) {
 		self.view = view
 		self.device = device
 		super.init()
@@ -58,8 +58,10 @@ extension Renderer: MTKViewDelegate {
 			return
 		}
 		
-		self.effect?.encodeCommands(commandBuffer: commandBuffer, projectionMatrix: projectionMatrix)
+		let rp = RendererParameters(metalView: self.view, projectionMatrix: self.projectionMatrix)
 		
+		self.filter?.encodeCommands(commandBuffer: commandBuffer, rendererParameters: rp)
+				
 		commandBuffer.present(view.currentDrawable!)
 
 		commandBuffer.commit()

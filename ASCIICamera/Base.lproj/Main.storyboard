@@ -23,41 +23,34 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="aHa-nc-HbL">
                                         <rect key="frame" x="4" y="0.0" width="385" height="64"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-mQ-c0x" userLabel="Edge">
-                                                <rect key="frame" x="0.0" y="15.000000000000004" width="76.333333333333329" height="34.333333333333343"/>
-                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bst-mQ-c0x" userLabel="Edge">
+                                                <rect key="frame" x="0.0" y="17" width="67" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Edge"/>
+                                                <state key="normal" title="Edge"/>
                                                 <connections>
                                                     <action selector="onEdgeDetectionFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="i5Q-Er-wDT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-xG-WCH">
-                                                <rect key="frame" x="78.333333333333314" y="15.000000000000004" width="79.666666666666686" height="34.333333333333343"/>
-                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-xG-WCH">
+                                                <rect key="frame" x="69" y="17" width="72.666666666666686" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="ASCII"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="ASCII"/>
                                                 <connections>
                                                     <action selector="onAsciiFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ZeW-qm-3nB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKE-eQ-Qa7" userLabel="Grayscale">
-                                                <rect key="frame" x="160" y="15.000000000000004" width="120.66666666666669" height="34.333333333333343"/>
-                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKE-eQ-Qa7" userLabel="Grayscale">
+                                                <rect key="frame" x="143.66666666666663" y="17" width="130.33333333333337" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Grayscale"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Grayscale"/>
                                                 <connections>
                                                     <action selector="onGrayscaleFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="GRl-e2-kp3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz5-Uu-bUk">
-                                                <rect key="frame" x="282.66666666666669" y="15.000000000000004" width="102.33333333333331" height="34.333333333333343"/>
-                                                <color key="tintColor" red="1" green="0.0" blue="0.18372426606238612" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz5-Uu-bUk">
+                                                <rect key="frame" x="276" y="17" width="109" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Pixelate"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Pixelate"/>
                                                 <connections>
                                                     <action selector="onPixelFilterButtonTapWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="bLV-vJ-77q"/>
                                                 </connections>

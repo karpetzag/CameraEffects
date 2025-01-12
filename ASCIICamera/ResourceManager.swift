@@ -21,12 +21,12 @@ class ResourceManager {
 			return cached
 		}
 		let textureLoader = MTKTextureLoader(device: device)
-
+		let usage: MTLTextureUsage = [.shaderRead, .shaderWrite]
 		let textureLoaderOptions = [
-			MTKTextureLoader.Option.textureUsage: NSNumber(value: MTLTextureUsage.shaderRead.rawValue),
+			MTKTextureLoader.Option.textureUsage: usage.rawValue,
 			MTKTextureLoader.Option.textureStorageMode: NSNumber(value: MTLStorageMode.`private`.rawValue),
 			.SRGB: false
-		]
+		] as [MTKTextureLoader.Option: Any]
 		
 		var texture: MTLTexture?
 		if !fromAssets {

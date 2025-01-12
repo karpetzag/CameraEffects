@@ -13,6 +13,8 @@
 // Including header shared between this Metal shader code and Swift/C code executing Metal API commands
 #import "ShaderTypes.h"
 
+constant half3 kRec709Luma = half3(0.2126, 0.7152, 0.0722);
+
 using namespace metal;
 
 typedef struct
@@ -46,9 +48,17 @@ fragment float4 fragmentShader(V2F in [[stage_in]], texture2d<half> texture [[te
 	return float4(color);
 }
 
-fragment float4 egdeDetectionFragmentShader(V2F input [[ stage_in ]],
+kernel void grayscaleCompute(texture2d<half, access::read_write> texture[[texture(0)]], uint2 id [[thread_position_in_grid]]) {
+	half4 color = texture.read(id);
+	float gray = dot(color.rgb, kRec709Luma);
+	half4 result = half4(gray, gray, gray, 1.0);
+	
+	texture.write(result, id);
+}
+
+fragment float4 egdeDetectionFragmentShader(V2F input [[stage_in]],
 							  constant FragmentUniforms& uniforms [[buffer(0)]],
-							  texture2d<half, access::sample> texture [[ texture(0) ]]) {	
+							  texture2d<half, access::sample> texture [[texture(0)]]) {
 	constexpr sampler s(address::clamp_to_edge, filter::linear);
 	half4 tC = texture.sample(s, input.texCoord);
 	auto coef = half3(0.2, 0.7, 0.07);

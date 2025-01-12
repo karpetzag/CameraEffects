@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0A2F942D32C1F200670707 /* GrayscaleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A2F932D32C1F200670707 /* GrayscaleFilter.swift */; };
+		9F0A2F962D336E3100670707 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A2F952D336E3100670707 /* Device.swift */; };
+		9F0A2F982D338CA300670707 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A2F972D338CA300670707 /* Filter.swift */; };
+		9F0A2F9A2D33DC9E00670707 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A2F992D33DC9E00670707 /* FilterController.swift */; };
+		9F0A2F9C2D33DD0D00670707 /* DefaultSingleInputFragmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A2F9B2D33DD0D00670707 /* DefaultSingleInputFragmentFilter.swift */; };
 		9F1B32662D290AB400140293 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B32652D290AB400140293 /* AppDelegate.swift */; };
 		9F1B326B2D290AB400140293 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B326A2D290AB400140293 /* CameraViewController.swift */; };
 		9F1B326D2D290AB400140293 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B326C2D290AB400140293 /* Shaders.metal */; };
@@ -24,13 +29,15 @@
 		9F1B32952D2A465100140293 /* chars.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1B32942D2A465100140293 /* chars.png */; };
 		9F1B329A2D2A93F900140293 /* ASCIIEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B32992D2A93F900140293 /* ASCIIEffect.swift */; };
 		9F1B329C2D2A940700140293 /* EdgeDetectionEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B329B2D2A940700140293 /* EdgeDetectionEffect.swift */; };
-		9F1B329E2D2A941600140293 /* PixelEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B329D2D2A941600140293 /* PixelEffect.swift */; };
-		9F1B32A02D2A94AB00140293 /* GrayscaleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B329F2D2A94AB00140293 /* GrayscaleEffect.swift */; };
-		9F1B32A22D2AD59200140293 /* RenderPipelineStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B32A12D2AD59200140293 /* RenderPipelineStateProvider.swift */; };
-		9F1B32A32D2AD5D300140293 /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B32962D2A786900140293 /* Effect.swift */; };
+		9F1B329E2D2A941600140293 /* PixelFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B329D2D2A941600140293 /* PixelFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F0A2F932D32C1F200670707 /* GrayscaleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscaleFilter.swift; sourceTree = "<group>"; };
+		9F0A2F952D336E3100670707 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		9F0A2F972D338CA300670707 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		9F0A2F992D33DC9E00670707 /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
+		9F0A2F9B2D33DD0D00670707 /* DefaultSingleInputFragmentFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSingleInputFragmentFilter.swift; sourceTree = "<group>"; };
 		9F1B32622D290AB400140293 /* ASCIICamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASCIICamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1B32652D290AB400140293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F1B32672D290AB400140293 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -48,12 +55,9 @@
 		9F1B328E2D29978A00140293 /* MetalCameraSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalCameraSession.swift; sourceTree = "<group>"; };
 		9F1B328F2D29978A00140293 /* MetalCameraSessionTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalCameraSessionTypes.swift; sourceTree = "<group>"; };
 		9F1B32942D2A465100140293 /* chars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chars.png; sourceTree = "<group>"; };
-		9F1B32962D2A786900140293 /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		9F1B32992D2A93F900140293 /* ASCIIEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASCIIEffect.swift; sourceTree = "<group>"; };
 		9F1B329B2D2A940700140293 /* EdgeDetectionEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeDetectionEffect.swift; sourceTree = "<group>"; };
-		9F1B329D2D2A941600140293 /* PixelEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelEffect.swift; sourceTree = "<group>"; };
-		9F1B329F2D2A94AB00140293 /* GrayscaleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscaleEffect.swift; sourceTree = "<group>"; };
-		9F1B32A12D2AD59200140293 /* RenderPipelineStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateProvider.swift; sourceTree = "<group>"; };
+		9F1B329D2D2A941600140293 /* PixelFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFilter.swift; sourceTree = "<group>"; };
 		9F1B32A42D2AF37000140293 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,10 +91,12 @@
 		9F1B32642D290AB400140293 /* ASCIICamera */ = {
 			isa = PBXGroup;
 			children = (
-				9F1B32982D2A93E600140293 /* Effects */,
+				9F1B32982D2A93E600140293 /* Filters */,
 				9F1B32902D29978A00140293 /* MetalCameraSession */,
 				9F1B32842D29444E00140293 /* Images */,
 				9F1B327D2D2911F200140293 /* Math.swift */,
+				9F0A2F952D336E3100670707 /* Device.swift */,
+				9F0A2F992D33DC9E00670707 /* FilterController.swift */,
 				9F1B327C2D2911F200140293 /* Types.swift */,
 				9F1B32652D290AB400140293 /* AppDelegate.swift */,
 				9F1B32802D292F1300140293 /* Renderer.swift */,
@@ -125,17 +131,17 @@
 			path = MetalCameraSession;
 			sourceTree = "<group>";
 		};
-		9F1B32982D2A93E600140293 /* Effects */ = {
+		9F1B32982D2A93E600140293 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				9F1B32962D2A786900140293 /* Effect.swift */,
 				9F1B32992D2A93F900140293 /* ASCIIEffect.swift */,
 				9F1B329B2D2A940700140293 /* EdgeDetectionEffect.swift */,
-				9F1B329D2D2A941600140293 /* PixelEffect.swift */,
-				9F1B329F2D2A94AB00140293 /* GrayscaleEffect.swift */,
-				9F1B32A12D2AD59200140293 /* RenderPipelineStateProvider.swift */,
+				9F1B329D2D2A941600140293 /* PixelFilter.swift */,
+				9F0A2F932D32C1F200670707 /* GrayscaleFilter.swift */,
+				9F0A2F972D338CA300670707 /* Filter.swift */,
+				9F0A2F9B2D33DD0D00670707 /* DefaultSingleInputFragmentFilter.swift */,
 			);
-			path = Effects;
+			path = Filters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,22 +240,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1B32A22D2AD59200140293 /* RenderPipelineStateProvider.swift in Sources */,
 				9F1B326D2D290AB400140293 /* Shaders.metal in Sources */,
-				9F1B32A02D2A94AB00140293 /* GrayscaleEffect.swift in Sources */,
+				9F0A2F962D336E3100670707 /* Device.swift in Sources */,
 				9F1B32932D29978A00140293 /* MetalCameraSessionTypes.swift in Sources */,
-				9F1B32A32D2AD5D300140293 /* Effect.swift in Sources */,
 				9F1B32912D29978A00140293 /* MetalCameraCaptureDevice.swift in Sources */,
 				9F1B326B2D290AB400140293 /* CameraViewController.swift in Sources */,
+				9F0A2F982D338CA300670707 /* Filter.swift in Sources */,
 				9F1B327E2D2911F200140293 /* Types.swift in Sources */,
+				9F0A2F942D32C1F200670707 /* GrayscaleFilter.swift in Sources */,
 				9F1B329C2D2A940700140293 /* EdgeDetectionEffect.swift in Sources */,
 				9F1B32862D29447400140293 /* ResourceManager.swift in Sources */,
+				9F0A2F9C2D33DD0D00670707 /* DefaultSingleInputFragmentFilter.swift in Sources */,
 				9F1B32662D290AB400140293 /* AppDelegate.swift in Sources */,
 				9F1B32922D29978A00140293 /* MetalCameraSession.swift in Sources */,
 				9F1B32812D292F1300140293 /* Renderer.swift in Sources */,
 				9F1B329A2D2A93F900140293 /* ASCIIEffect.swift in Sources */,
+				9F0A2F9A2D33DC9E00670707 /* FilterController.swift in Sources */,
 				9F1B327F2D2911F200140293 /* Math.swift in Sources */,
-				9F1B329E2D2A941600140293 /* PixelEffect.swift in Sources */,
+				9F1B329E2D2A941600140293 /* PixelFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
